@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>minmax</title>
+</head>
+<body>
+<script>
+    let array = [];
+    for(let i = 0; i < 100; i++){
+        array[i] = Math.floor(Math.random() * 101);
+    }
+
+    function findmin(arr) {
+        let min = arr[0];
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] < min) {
+                min = arr[i]
+            }
+        }
+        alert('Giá trị nhỏ nhất: ' + min);
+    }
+
+    function findmax(arr) {
+        let max = arr[0];
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] > max) {
+                max = arr[i]
+            }
+        }
+        alert('Giá trị lớn nhất: ' + max);
+    }
+
+    function draw() {
+        let i;
+        for (i = 0; i < array.length; i++) {
+            document.write(array[i] + ' ');
+            if (i % 10 == 9) {
+                document.write('</br>');
+            }
+        }
+        // let a = array.indexOf(array[i]);
+    }
+
+    draw();
+    findmin(array);
+   findmax(array);
+
+</script>
+</body>
+</html>
